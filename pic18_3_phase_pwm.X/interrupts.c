@@ -84,15 +84,15 @@ void low_isr(void)
     /* TODO Add Low Priority interrupt routine code here. */
 
     /* Determine which flag generated the interrupt */
-    if (TMR2IF) {
-        
-        UpdatePWM1(); /* Updates Echanced PWM 1 duty-cycle */
-        UpdatePWM2(); /* Updates Echanced PWM 2 duty-cycle */
-        UpdatePWM3(); /* Updates Echanced PWM 3 duty-cycle */
-
-        TMR2IF = 0; /* Clear Interrupt Flag */
-
-    } else {
-        /* Unhandled interrupts */
-    }
+//    if (TMR2IF) {
+//
+//        UpdatePWM1(); /* Updates Echanced PWM 1 duty-cycle */
+//        UpdatePWM2(); /* Updates Echanced PWM 2 duty-cycle */
+//        UpdatePWM3(); /* Updates Echanced PWM 3 duty-cycle */
+//
+//        TMR2IF = 0; /* Clear Interrupt Flag */
+//
+//    } else {
+//        /* Unhandled interrupts */
+//    }
 }

@@ -1,12 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"21010 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
-[v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
-"15 pwm.h
-[v _UpdatePWM1 `(v ~T0 @X0 0 ef ]
-"16
-[v _UpdatePWM2 `(v ~T0 @X0 0 ef ]
-"17
-[v _UpdatePWM3 `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f27j53.h: 47: extern volatile unsigned char ADCTRIG @ 0xEB8;
@@ -9070,32 +9062,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;interrupts.c: 77: {
 [e :U _low_isr ]
 [f ]
-[; ;interrupts.c: 87: if (TMR2IF) {
-"87
-[e $ ! _TMR2IF 1270  ]
-{
-[; ;interrupts.c: 89: UpdatePWM1();
-"89
-[e ( _UpdatePWM1 ..  ]
-[; ;interrupts.c: 90: UpdatePWM2();
-"90
-[e ( _UpdatePWM2 ..  ]
-[; ;interrupts.c: 91: UpdatePWM3();
-"91
-[e ( _UpdatePWM3 ..  ]
-[; ;interrupts.c: 93: TMR2IF = 0;
-"93
-[e = _TMR2IF -> -> 0 `i `b ]
-"95
-}
-[; ;interrupts.c: 95: } else {
-[e $U 1271  ]
-[e :U 1270 ]
-{
-"97
-}
-[e :U 1271 ]
-[; ;interrupts.c: 97: }
 [; ;interrupts.c: 98: }
 "98
 [e :UE 1269 ]

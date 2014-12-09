@@ -11733,16 +11733,5 @@ void low_priority interrupt low_isr(void)
 # 77
 {
 
-# 87
-if (TMR2IF) {
-
-UpdatePWM1();
-UpdatePWM2();
-UpdatePWM3();
-
-TMR2IF = 0;
-
-} else {
-
-}
+# 98
 }

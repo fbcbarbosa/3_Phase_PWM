@@ -11,31 +11,31 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/cgtm5Xq2e.obj
-end_init CODE 0 B4 B4 4 1
+$/tmp/cgttQQjUx.obj
+end_init CODE 0 A2 A2 4 1
 reset_vec CODE 0 0 0 4 1
 config CONFIG 0 1FFF8 1FFF8 8 1
 $dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-intcodelo CODE 0 18 18 9C 1
+intcodelo CODE 0 18 18 8A 1
 intcode CODE 0 8 8 10 1
-intcode_body CODE 0 34E 34E 66 1
-text11 CODE 0 1DA 1DA 8E 1
-text10 CODE 0 14C 14C 8E 1
-text9 CODE 0 B8 B8 94 1
-text7 CODE 0 4B4 4B4 E 1
-text6 CODE 0 436 436 34 1
-text5 CODE 0 402 402 34 1
-text4 CODE 0 3B4 3B4 4E 1
-text3 CODE 0 49C 49C 18 1
-text2 CODE 0 2E8 2E8 66 1
-text1 CODE 0 4CC 4CC 6 1
-text0 CODE 0 4C2 4C2 A 1
-cstackCOMRAM COMRAM 1 1 1 26 1
+intcode_body CODE 0 310 310 66 1
+text10 CODE 0 48C 48C E 1
+text9 CODE 0 3F2 3F2 34 1
+text8 CODE 0 3BE 3BE 34 1
+text7 CODE 0 376 376 48 1
+text6 CODE 0 474 474 18 1
+text5 CODE 0 2AA 2AA 66 1
+text4 CODE 0 49A 49A 6 1
+text3 CODE 0 A6 A6 8E 1
+text2 CODE 0 232 232 78 1
+text1 CODE 0 1B4 1B4 7E 1
+text0 CODE 0 458 458 1C 1
+cstackCOMRAM COMRAM 1 1 1 23 1
 dataBANK0 BANK0 1 60 60 80 1
-bssCOMRAM COMRAM 1 27 27 8 1
-cinit CODE 0 46A 46A 32 1
-nvCOMRAM COMRAM 1 2F 2F 2 1
-idataBANK0 CODE 0 268 268 80 1
+bssCOMRAM COMRAM 1 24 24 8 1
+cinit CODE 0 426 426 32 1
+nvCOMRAM COMRAM 1 2C 2C 2 1
+idataBANK0 CODE 0 134 134 80 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -57,13 +57,13 @@ BANK6 00600-006FF 1
 BANK7 00700-007FF 1
 BANK8 00800-008FF 1
 BANK9 00900-009FF 1
-BIGRAM 00031-0005F 1
+BIGRAM 0002E-0005F 1
 BIGRAM 000E0-00EAF 1
 CODE 00004-00007 1
-CODE 004D2-1FFF7 1
-COMRAM 00031-0005F 1
+CODE 004A0-1FFF7 1
+COMRAM 0002E-0005F 1
 CONST 00004-00007 1
-CONST 004D2-1FFF7 1
+CONST 004A0-1FFF7 1
 MEDIUMCONST 00F00-0FFFF 1
 MEDIUMCONST 10F00-1FFF7 1
 RAM 000E0-00EAF 1
@@ -84,127 +84,123 @@ STACK 000E0-009FF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":29 8 intcode CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":154 8 intcode CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":69 18 intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":34 18 intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":87 5C intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":89 60 intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":90 64 intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":91 68 intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":93 6C intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":98 6E intcodelo CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":171 B8 text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":173 B8 text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":174 C0 text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":175 C8 text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":176 11C text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":177 136 text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":178 14A text9 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":159 14C text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":161 14C text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":162 154 text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":163 15C text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":164 1B0 text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":165 1C8 text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":166 1D8 text10 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":147 1DA text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":149 1DA text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":150 1E2 text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":151 1EA text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":152 23E text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":153 256 text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":154 266 text11 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":58 2E8 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":60 2E8 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":61 2F0 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":64 2F8 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":65 304 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":66 30A text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":67 310 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":68 316 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":69 31C text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":70 322 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":71 328 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":74 334 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":75 336 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":76 338 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":77 33A text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":80 33C text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":82 340 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":83 344 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":84 348 text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":85 34C text2 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":29 34E intcode_body CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c":65 37A intcode_body CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":133 3B4 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":135 3B4 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":136 3BA text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":138 3C0 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":139 3CC text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":140 3D8 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":141 3E4 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":142 400 text4 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":119 402 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":121 402 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":122 406 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":124 40A text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":125 412 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":126 41A text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":127 426 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":128 434 text5 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":105 436 text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":107 436 text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":108 43A text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":110 43E text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":111 446 text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":112 44E text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":113 45A text6 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":114 468 text6 CODE
-"/tmp/cgtawQHKS":3492 46A cinit CODE
-"/tmp/cgtawQHKS":3494 46A cinit CODE
-"/tmp/cgtawQHKS":3497 46A cinit CODE
-"/tmp/cgtawQHKS":3527 46A cinit CODE
-"/tmp/cgtawQHKS":3528 46E cinit CODE
-"/tmp/cgtawQHKS":3529 470 cinit CODE
-"/tmp/cgtawQHKS":3530 470 cinit CODE
-"/tmp/cgtawQHKS":3531 472 cinit CODE
-"/tmp/cgtawQHKS":3532 474 cinit CODE
-"/tmp/cgtawQHKS":3537 476 cinit CODE
-"/tmp/cgtawQHKS":3538 478 cinit CODE
-"/tmp/cgtawQHKS":3539 47A cinit CODE
-"/tmp/cgtawQHKS":3540 47C cinit CODE
-"/tmp/cgtawQHKS":3541 47E cinit CODE
-"/tmp/cgtawQHKS":3542 480 cinit CODE
-"/tmp/cgtawQHKS":3543 482 cinit CODE
-"/tmp/cgtawQHKS":3544 486 cinit CODE
-"/tmp/cgtawQHKS":3545 48A cinit CODE
-"/tmp/cgtawQHKS":3546 48A cinit CODE
-"/tmp/cgtawQHKS":3547 48C cinit CODE
-"/tmp/cgtawQHKS":3548 490 cinit CODE
-"/tmp/cgtawQHKS":3549 492 cinit CODE
-"/tmp/cgtawQHKS":3550 494 cinit CODE
-"/tmp/cgtawQHKS":3556 496 cinit CODE
-"/tmp/cgtawQHKS":3557 496 cinit CODE
-"/tmp/cgtawQHKS":3558 498 cinit CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":90 49C text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":93 49C text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":94 4A4 text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":95 4AC text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":97 4AE text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c":100 4B2 text3 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":24 4B4 text7 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":27 4B4 text7 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":28 4B6 text7 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":29 4BC text7 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c":34 4C0 text7 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":36 4C2 text0 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":39 4C2 text0 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":42 4C6 text0 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":46 4CA text0 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":56 4CC text1 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":61 4CC text1 CODE
-"/home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c":62 4D0 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":29 8 intcode CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":98 8 intcode CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":69 18 intcodelo CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":34 18 intcodelo CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":98 5C intcodelo CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":148 A6 text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":150 A6 text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":151 BE text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":152 EC text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":153 10A text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":154 122 text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":155 132 text3 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":171 1B4 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":173 1B4 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":174 1D4 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":175 202 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":176 21C text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":177 230 text1 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":160 232 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":162 232 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":163 252 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":164 280 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":165 298 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":166 2A8 text2 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":58 2AA text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":60 2AA text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":61 2B2 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":64 2BA text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":66 2BE text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":67 2CA text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":68 2D0 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":69 2D6 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":70 2DC text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":71 2E2 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":72 2E8 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":73 2EE text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":76 2FA text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":77 2FC text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":81 2FE text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":83 302 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":84 306 text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":85 30A text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":86 30E text5 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":29 310 intcode_body CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c":65 33C intcode_body CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":134 376 text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":136 376 text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":137 37C text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":139 382 text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":140 38E text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":141 39A text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":142 3A0 text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":143 3BC text7 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":120 3BE text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":122 3BE text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":123 3C2 text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":125 3C6 text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":126 3CE text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":127 3D6 text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":128 3E2 text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":129 3F0 text8 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":106 3F2 text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":108 3F2 text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":109 3F6 text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":111 3FA text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":112 402 text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":113 40A text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":114 416 text9 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":115 424 text9 CODE
+"/tmp/cgtxq6blT":3492 426 cinit CODE
+"/tmp/cgtxq6blT":3494 426 cinit CODE
+"/tmp/cgtxq6blT":3497 426 cinit CODE
+"/tmp/cgtxq6blT":3528 426 cinit CODE
+"/tmp/cgtxq6blT":3529 42A cinit CODE
+"/tmp/cgtxq6blT":3530 42C cinit CODE
+"/tmp/cgtxq6blT":3531 42C cinit CODE
+"/tmp/cgtxq6blT":3532 42E cinit CODE
+"/tmp/cgtxq6blT":3533 430 cinit CODE
+"/tmp/cgtxq6blT":3538 432 cinit CODE
+"/tmp/cgtxq6blT":3539 434 cinit CODE
+"/tmp/cgtxq6blT":3540 436 cinit CODE
+"/tmp/cgtxq6blT":3541 438 cinit CODE
+"/tmp/cgtxq6blT":3542 43A cinit CODE
+"/tmp/cgtxq6blT":3543 43C cinit CODE
+"/tmp/cgtxq6blT":3544 43E cinit CODE
+"/tmp/cgtxq6blT":3545 442 cinit CODE
+"/tmp/cgtxq6blT":3546 446 cinit CODE
+"/tmp/cgtxq6blT":3547 446 cinit CODE
+"/tmp/cgtxq6blT":3548 448 cinit CODE
+"/tmp/cgtxq6blT":3549 44C cinit CODE
+"/tmp/cgtxq6blT":3550 44E cinit CODE
+"/tmp/cgtxq6blT":3551 450 cinit CODE
+"/tmp/cgtxq6blT":3557 452 cinit CODE
+"/tmp/cgtxq6blT":3558 452 cinit CODE
+"/tmp/cgtxq6blT":3559 454 cinit CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":36 458 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":41 458 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":44 45C text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":50 460 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":51 464 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":52 468 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":53 46C text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":55 470 text0 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":91 474 text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":94 474 text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":95 47C text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":96 484 text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":98 486 text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c":101 48A text6 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":24 48C text10 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":27 48C text10 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":28 48E text10 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":29 494 text10 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c":34 498 text10 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":64 49A text4 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":69 49A text4 CODE
+"/home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c":70 49E text4 CODE
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -227,16 +223,17 @@ __Hintentry 0 0 ABS 0 intentry dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.
 __Lintentry 0 0 ABS 0 intentry dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_WDTEN$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_low_isr 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitTMR2 4B4 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_main 4C2 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/cgtm5Xq2e.obj
-start B4 0 CODE 0 init /tmp/cgtm5Xq2e.obj
+__end_of_InitTMR2 48C 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_main 458 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/cgttQQjUx.obj
+start A2 0 CODE 0 init /tmp/cgttQQjUx.obj
 __CFG_SOSCSEL$HIGH 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _RPOR5 EC5 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _RPOR6 EC6 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _RPOR7 EC7 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _RPOR8 EC8 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _RPOR9 EC9 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_TRISB F93 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_DSBOREN$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -251,7 +248,7 @@ __Lbigram 0 0 ABS 0 bigram dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.prod
 __Hrparam 0 0 ABS 0 rparam dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lrparam 0 0 ABS 0 rparam dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_DSWDTEN$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_Phase 29 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_Phase 26 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hram 0 0 ABS 0 ram dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lram 0 0 ABS 0 ram dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hcomram 0 0 ABS 0 comram dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -299,39 +296,39 @@ __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__pnvCOMRAM 2F 0 COMRAM 1 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__pnvCOMRAM 2C 0 COMRAM 1 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hdata 0 0 ABS 0 data dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ldata 0 0 ABS 0 data dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-stackhi 9FF 0 ABS 0 - /tmp/cgtm5Xq2e.obj
-__end_of_ConfigureOscillator 4C2 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+stackhi 9FF 0 ABS 0 - /tmp/cgttQQjUx.obj
+__end_of_ConfigureOscillator 49A 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htemp 0 0 COMRAM 1 temp dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltemp 0 0 COMRAM 1 temp dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-stacklo E0 0 ABS 0 - /tmp/cgtm5Xq2e.obj
+stacklo E0 0 ABS 0 - /tmp/cgttQQjUx.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_InitTMR2 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Hinit B4 0 CODE 0 init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Linit B4 0 CODE 0 init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Hintcodelo B4 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Hinit A2 0 CODE 0 init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Linit A2 0 CODE 0 init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Hintcodelo A2 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lintcodelo 18 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_main 4CC 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_main 474 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __pintcodelo 18 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_Result 2D 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_Result 2A 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext 0 0 ABS 0 text dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext 0 0 ABS 0 text dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __LdataBANK0 0 0 ABS 0 dataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __pdataBANK0 60 0 BANK0 1 dataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-end_of_initialization 496 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+end_of_initialization 452 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_PLLDIV$1 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitPWM1 46A 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitPWM2 436 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitPWM3 402 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_InitPWM1 426 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_InitPWM2 3F2 0 CODE 0 text8 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_InitPWM3 3BE 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _T2CONbits FCA 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_InitMotorPWM 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_high_isr 3B4 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_high_isr 376 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -349,8 +346,8 @@ __Lbank4 0 0 ABS 0 bank4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.produc
 __CFG_MSSP7B_EN$MSK7 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank5 0 0 ABS 0 bank5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank5 0 0 ABS 0 bank5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Hpowerup B4 0 CODE 0 powerup dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Lpowerup B4 0 CODE 0 powerup dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Hpowerup A2 0 CODE 0 powerup dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Lpowerup A2 0 CODE 0 powerup dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank6 0 0 ABS 0 bank6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank6 0 0 ABS 0 bank6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank7 0 0 ABS 0 bank7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -363,42 +360,44 @@ __Hbank9 0 0 ABS 0 bank9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.produc
 __Lbank9 0 0 ABS 0 bank9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext1 0 0 ABS 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext1 0 0 ABS 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext0 4C2 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_INTCON2bits FF1 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext0 458 0 CODE 0 text0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext2 0 0 ABS 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext2 0 0 ABS 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext1 4CC 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext1 1B4 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext3 0 0 ABS 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext3 0 0 ABS 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext2 2E8 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext2 232 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext4 0 0 ABS 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext4 0 0 ABS 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext3 49C 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext3 A6 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext5 0 0 ABS 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext5 0 0 ABS 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext4 3B4 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext4 49A 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext6 0 0 ABS 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext6 0 0 ABS 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext5 402 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext5 2AA 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext7 0 0 ABS 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext7 0 0 ABS 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext6 436 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext6 474 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext7 4B4 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__pbssCOMRAM 27 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Htext8 0 0 ABS 0 text8 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Ltext8 0 0 ABS 0 text8 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext7 376 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__pbssCOMRAM 24 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext9 0 0 ABS 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext9 0 0 ABS 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext9 B8 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext8 3BE 0 CODE 0 text8 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext9 3F2 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitApp 4D2 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_InitApp 4A0 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_UpdatePWM1 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_UpdatePWM2 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_UpdatePWM3 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_DSWDTOSC$INTOSCREF 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitMotorPWM 2E8 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of__initialization 496 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_InitMotorPWM 2AA 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of__initialization 452 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _CCP1CONbits FBA 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _CCP2CONbits FB4 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _CCP3CONbits F15 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -413,14 +412,14 @@ __Lidloc 0 0 IDLOC 0 idloc dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.prod
 __Hstack 0 0 STACK 2 stack dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lstack 0 0 STACK 2 stack dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_high_isr 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-int_func 34E 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+int_func 310 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hparam 0 0 ABS 0 rparam dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lparam 0 0 ABS 0 rparam dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hspace_0 20000 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lspace_0 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitApp 4CC 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_InitApp 49A 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_OSC$INTOSC 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_IESO$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -434,10 +433,10 @@ __Hnvbit 0 0 COMRAM 1 nvbit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.pro
 __Lnvbit 0 0 COMRAM 1 nvbit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hcinit 0 0 ABS 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lcinit 0 0 ABS 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__pcinit 46A 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__pcinit 426 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ramtop F00 0 RAM 0 ramtop /tmp/cgtm5Xq2e.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgtm5Xq2e.obj
+__ramtop F00 0 RAM 0 ramtop /tmp/cgttQQjUx.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/cgttQQjUx.obj
 _low_isr 18 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hconst 0 0 CODE 0 const dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -445,7 +444,7 @@ __Lconst 0 0 CODE 0 const dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.produ
 __CFG_CFGPLLEN$OFF 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __LidataBANK0 0 0 ABS 0 idataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__pidataBANK0 268 0 CODE 0 idataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__pidataBANK0 134 0 CODE 0 idataBANK0 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_WPEND$PAGE_WPFP 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank10 0 0 ABS 0 bank10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank10 0 0 ABS 0 bank10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
@@ -453,70 +452,67 @@ __Hbank11 0 0 ABS 0 bank11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.prod
 __Lbank11 0 0 ABS 0 bank11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank12 0 0 ABS 0 bank12 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank12 0 0 ABS 0 bank12 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_Multiplier 27 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_Multiplier 24 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank13 0 0 ABS 0 bank13 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank13 0 0 ABS 0 bank13 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hbank14 0 0 ABS 0 bank14 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lbank14 0 0 ABS 0 bank14 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Htext10 0 0 ABS 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ltext10 0 0 ABS 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext10 14C 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Htext11 0 0 ABS 0 text11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Ltext11 0 0 ABS 0 text11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__ptext11 1DA 0 CODE 0 text11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__ptext10 48C 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_IOL1WAY$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitPWM1 436 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitPWM2 402 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitTMR2 49C 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_InitPWM3 3B4 0 CODE 0 text4 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-___inthi_sp 0 0 STACK 2 stack /tmp/cgtm5Xq2e.obj
+_InitPWM1 3F2 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_InitPWM2 3BE 0 CODE 0 text8 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_InitTMR2 474 0 CODE 0 text6 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_InitPWM3 376 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/cgttQQjUx.obj
 __CFG_ADCSEL$BIT10 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-___intlo_sp 0 0 STACK 2 stack /tmp/cgtm5Xq2e.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/cgttQQjUx.obj
 _OSCCONbits FD3 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _INTCONbits FF2 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _PPSCONbits EBF 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Hend_init B8 0 CODE 0 end_init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__Lend_init B4 0 CODE 0 end_init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_UpdatePWM1 268 0 CODE 0 text11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_UpdatePWM2 1DA 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_UpdatePWM3 14C 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Hend_init A6 0 CODE 0 end_init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__Lend_init A2 0 CODE 0 end_init dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_UpdatePWM1 134 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_UpdatePWM2 2AA 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_UpdatePWM3 232 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hjflash_buffer 1F800 0 CODE 0 jflash_buffer dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Ljflash_buffer 1F800 0 CODE 0 jflash_buffer dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_CP0$OFF 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgtm5Xq2e.obj
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/cgttQQjUx.obj
 __size_of_InitPWM1 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_InitPWM2 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __size_of_InitPWM3 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_WPFP$PAGE_127 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/cgtm5Xq2e.obj
+__accesstop 60 0 ABS 0 - /tmp/cgttQQjUx.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __Lintcode_body 0 0 ABS 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_LS48MHZ$SYS48X8 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__pintcode_body 34E 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-intlevel0 0 0 CODE 0 text /tmp/cgtm5Xq2e.obj
+__pintcode_body 310 0 CODE 0 intcode_body dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+intlevel0 0 0 CODE 0 text /tmp/cgttQQjUx.obj
 __size_of_InitApp 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-intlevel1 0 0 CODE 0 text /tmp/cgtm5Xq2e.obj
+intlevel1 0 0 CODE 0 text /tmp/cgttQQjUx.obj
 __CFG_WPDIS$OFF 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_UpdatePWM1 1DA 0 CODE 0 text11 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-intlevel2 0 0 CODE 0 text /tmp/cgtm5Xq2e.obj
-intlevel3 0 0 CODE 0 text /tmp/cgtm5Xq2e.obj
-_UpdatePWM2 14C 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_UpdatePWM1 A6 0 CODE 0 text3 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+intlevel2 0 0 CODE 0 text /tmp/cgttQQjUx.obj
+intlevel3 0 0 CODE 0 text /tmp/cgttQQjUx.obj
+_UpdatePWM2 232 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _CCPTMRS0bits F52 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_UpdatePWM3 B8 0 CODE 0 text9 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_Delta_Phase 2F 0 COMRAM 1 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-start_initialization 46A 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_Phase_Offset 2B 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_low_isr B4 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__initialization 46A 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_UpdatePWM3 1B4 0 CODE 0 text1 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_Delta_Phase 2C 0 COMRAM 1 nvCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+start_initialization 426 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_Phase_Offset 28 0 COMRAM 1 bssCOMRAM dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_low_isr A2 0 CODE 0 intcodelo dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__initialization 426 0 CODE 0 cinit dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _ECCP1DELbits FBD 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _ECCP2DELbits FB7 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 _ECCP3DELbits F18 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __activetblptr 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-__end_of_InitMotorPWM 34E 0 CODE 0 text2 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
-_ConfigureOscillator 4B4 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+__end_of_InitMotorPWM 310 0 CODE 0 text5 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
+_ConfigureOscillator 48C 0 CODE 0 text10 dist/XC8_18F27j53/production/pic18_3_phase_pwm.X.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -543,7 +539,7 @@ _ConfigureOscillator 4B4 0 CODE 0 text7 dist/XC8_18F27j53/production/pic18_3_pha
 %SEGMENTS
 reset_vec 0 0 0 4 1
 intcode 0 8 8 10 1
-intcodelo 0 18 18 4BA 1
+intcodelo 0 18 18 488 1
 config 0 1FFF8 1FFF8 8 1
-cstackCOMRAM 1 1 1 30 1
+cstackCOMRAM 1 1 1 2D 1
 dataBANK0 1 60 60 80 1

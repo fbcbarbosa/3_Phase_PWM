@@ -125,37 +125,37 @@
 [v ___asftsub __asftsub `(f  1 e 3 0 ]
 "6 /opt/microchip/xc8/v1.33/sources/pic18/aslmul.c
 [v ___aslmul __aslmul `(ul  1 e 4 0 ]
-"29 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c
+"29 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c
 [v _high_isr high_isr `II(v  1 e 0 0 ]
 "69
 [v _low_isr low_isr `IIL(v  1 e 0 0 ]
-"36 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c
+"36 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c
 [v _main main `(v  1 e 0 0 ]
-"56
+"64
 [v _InitApp InitApp `(v  1 e 0 0 ]
-"58 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c
+"58 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c
 [v _InitMotorPWM InitMotorPWM `(v  1 e 0 0 ]
-"90
+"91
 [v _InitTMR2 InitTMR2 `(v  1 e 0 0 ]
-"105
+"106
 [v _InitPWM1 InitPWM1 `(v  1 e 0 0 ]
-"119
+"120
 [v _InitPWM2 InitPWM2 `(v  1 e 0 0 ]
-"133
+"134
 [v _InitPWM3 InitPWM3 `(v  1 e 0 0 ]
-"147
+"148
 [v _UpdatePWM1 UpdatePWM1 `(v  1 e 0 0 ]
-"159
+"160
 [v _UpdatePWM2 UpdatePWM2 `(v  1 e 0 0 ]
 "171
 [v _UpdatePWM3 UpdatePWM3 `(v  1 e 0 0 ]
-"24 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c
+"24 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
-[s S89 . 1 `uc 1 IOLOCK 1 0 :1:0 
+[s S91 . 1 `uc 1 IOLOCK 1 0 :1:0 
 ]
 "1076 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
-[u S91 . 1 `S89 1 . 1 0 ]
-[v _PPSCONbits PPSCONbits `VES91  1 e 1 @3775 ]
+[u S93 . 1 `S91 1 . 1 0 ]
+[v _PPSCONbits PPSCONbits `VES93  1 e 1 @3775 ]
 "1115
 [v _RPOR5 RPOR5 `VEuc  1 e 1 @3781 ]
 "1121
@@ -168,12 +168,12 @@
 [v _RPOR9 RPOR9 `VEuc  1 e 1 @3785 ]
 "1145
 [v _RPOR10 RPOR10 `VEuc  1 e 1 @3786 ]
-[s S428 . 1 `uc 1 CCP3M 1 0 :4:0 
+[s S389 . 1 `uc 1 CCP3M 1 0 :4:0 
 `uc 1 DC3B 1 0 :2:4 
 `uc 1 P3M 1 0 :2:6 
 ]
 "2018
-[s S432 . 1 `uc 1 CCP3M0 1 0 :1:0 
+[s S393 . 1 `uc 1 CCP3M0 1 0 :1:0 
 `uc 1 CCP3M1 1 0 :1:1 
 `uc 1 CCP3M2 1 0 :1:2 
 `uc 1 CCP3M3 1 0 :1:3 
@@ -182,15 +182,15 @@
 `uc 1 P3M0 1 0 :1:6 
 `uc 1 P3M1 1 0 :1:7 
 ]
-[u S441 . 1 `S428 1 . 1 0 `S432 1 . 1 0 ]
-[v _CCP3CONbits CCP3CONbits `VES441  1 e 1 @3861 ]
+[u S402 . 1 `S389 1 . 1 0 `S393 1 . 1 0 ]
+[v _CCP3CONbits CCP3CONbits `VES402  1 e 1 @3861 ]
 "2077
 [v _CCPR3L CCPR3L `VEuc  1 e 1 @3862 ]
-[s S335 . 1 `uc 1 P1DC 1 0 :7:0 
+[s S296 . 1 `uc 1 P1DC 1 0 :7:0 
 `uc 1 P1RSEN 1 0 :1:7 
 ]
 "2135
-[s S338 . 1 `uc 1 P1DC0 1 0 :1:0 
+[s S299 . 1 `uc 1 P1DC0 1 0 :1:0 
 `uc 1 P1DC1 1 0 :1:1 
 `uc 1 P1DC2 1 0 :1:2 
 `uc 1 P1DC3 1 0 :1:3 
@@ -198,14 +198,14 @@
 `uc 1 P1DC5 1 0 :1:5 
 `uc 1 P1DC6 1 0 :1:6 
 ]
-[u S346 . 1 `S335 1 . 1 0 `S338 1 . 1 0 ]
-[v _ECCP3DELbits ECCP3DELbits `VES346  1 e 1 @3864 ]
-[s S305 . 1 `uc 1 C1TSEL 1 0 :3:0 
+[u S307 . 1 `S296 1 . 1 0 `S299 1 . 1 0 ]
+[v _ECCP3DELbits ECCP3DELbits `VES307  1 e 1 @3864 ]
+[s S266 . 1 `uc 1 C1TSEL 1 0 :3:0 
 `uc 1 C2TSEL 1 0 :3:3 
 `uc 1 C3TSEL 1 0 :2:6 
 ]
 "6029
-[s S309 . 1 `uc 1 C1TSEL0 1 0 :1:0 
+[s S270 . 1 `uc 1 C1TSEL0 1 0 :1:0 
 `uc 1 C1TSEL1 1 0 :1:1 
 `uc 1 C1TSEL2 1 0 :1:2 
 `uc 1 C2TSEL0 1 0 :1:3 
@@ -214,16 +214,18 @@
 `uc 1 C3TSEL0 1 0 :1:6 
 `uc 1 C3TSEL1 1 0 :1:7 
 ]
-[u S318 . 1 `S305 1 . 1 0 `S309 1 . 1 0 ]
-[v _CCPTMRS0bits CCPTMRS0bits `VES318  1 e 1 @3922 ]
+[u S279 . 1 `S266 1 . 1 0 `S270 1 . 1 0 ]
+[v _CCPTMRS0bits CCPTMRS0bits `VES279  1 e 1 @3922 ]
+"10323
+[v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "11778
 [v _EECON2 EECON2 `VEuc  1 e 1 @4007 ]
-[s S266 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S227 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 `uc 1 P1M 1 0 :2:6 
 ]
 "12941
-[s S270 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S231 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
@@ -232,28 +234,28 @@
 `uc 1 P1M0 1 0 :1:6 
 `uc 1 P1M1 1 0 :1:7 
 ]
-[s S279 . 1 `uc 1 . 1 0 :4:0 
+[s S240 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 CCP1Y 1 0 :1:4 
 `uc 1 CCP1X 1 0 :1:5 
 ]
-[u S283 . 1 `S266 1 . 1 0 `S270 1 . 1 0 `S279 1 . 1 0 ]
-[v _CCP2CONbits CCP2CONbits `VES283  1 e 1 @4020 ]
+[u S244 . 1 `S227 1 . 1 0 `S231 1 . 1 0 `S240 1 . 1 0 ]
+[v _CCP2CONbits CCP2CONbits `VES244  1 e 1 @4020 ]
 "13106
 [v _CCPR2L CCPR2L `VEuc  1 e 1 @4021 ]
 "13169
-[v _ECCP2DELbits ECCP2DELbits `VES346  1 e 1 @4023 ]
+[v _ECCP2DELbits ECCP2DELbits `VES307  1 e 1 @4023 ]
 "13680
-[v _CCP1CONbits CCP1CONbits `VES283  1 e 1 @4026 ]
+[v _CCP1CONbits CCP1CONbits `VES244  1 e 1 @4026 ]
 "13845
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4027 ]
 "13908
-[v _ECCP1DELbits ECCP1DELbits `VES346  1 e 1 @4029 ]
-[s S236 . 1 `uc 1 T2CKPS 1 0 :2:0 
+[v _ECCP1DELbits ECCP1DELbits `VES307  1 e 1 @4029 ]
+[s S197 . 1 `uc 1 T2CKPS 1 0 :2:0 
 `uc 1 TMR2ON 1 0 :1:2 
 `uc 1 T2OUTPS 1 0 :4:3 
 ]
 "16312
-[s S240 . 1 `uc 1 T2CKPS0 1 0 :1:0 
+[s S201 . 1 `uc 1 T2CKPS0 1 0 :1:0 
 `uc 1 T2CKPS1 1 0 :1:1 
 `uc 1 . 1 0 :1:2 
 `uc 1 T2OUTPS0 1 0 :1:3 
@@ -261,48 +263,27 @@
 `uc 1 T2OUTPS2 1 0 :1:5 
 `uc 1 T2OUTPS3 1 0 :1:6 
 ]
-[u S248 . 1 `S236 1 . 1 0 `S240 1 . 1 0 ]
-[v _T2CONbits T2CONbits `VES248  1 e 1 @4042 ]
+[u S209 . 1 `S197 1 . 1 0 `S201 1 . 1 0 ]
+[v _T2CONbits T2CONbits `VES209  1 e 1 @4042 ]
 "16361
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
-[s S52 . 1 `uc 1 SCS 1 0 :2:0 
+[s S53 . 1 `uc 1 SCS 1 0 :2:0 
 `uc 1 FLTS 1 0 :1:2 
 `uc 1 OSTS 1 0 :1:3 
 `uc 1 IRCF 1 0 :3:4 
 `uc 1 IDLEN 1 0 :1:7 
 ]
 "17441
-[s S58 . 1 `uc 1 SCS0 1 0 :1:0 
+[s S59 . 1 `uc 1 SCS0 1 0 :1:0 
 `uc 1 SCS1 1 0 :1:1 
 `uc 1 . 1 0 :2:2 
 `uc 1 IRCF0 1 0 :1:4 
 `uc 1 IRCF1 1 0 :1:5 
 `uc 1 IRCF2 1 0 :1:6 
 ]
-[u S65 . 1 `S52 1 . 1 0 `S58 1 . 1 0 ]
-[v _OSCCONbits OSCCONbits `VES65  1 e 1 @4051 ]
-[s S179 . 1 `uc 1 . 1 0 :7:0 
-`uc 1 NOT_RBPU 1 0 :1:7 
-]
-"18228
-[s S182 . 1 `uc 1 RBIP 1 0 :1:0 
-`uc 1 INT3IP 1 0 :1:1 
-`uc 1 TMR0IP 1 0 :1:2 
-`uc 1 INTEDG3 1 0 :1:3 
-`uc 1 INTEDG2 1 0 :1:4 
-`uc 1 INTEDG1 1 0 :1:5 
-`uc 1 INTEDG0 1 0 :1:6 
-`uc 1 nRBPU 1 0 :1:7 
-]
-[s S191 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 INT3P 1 0 :1:1 
-`uc 1 T0IP 1 0 :1:2 
-`uc 1 . 1 0 :4:3 
-`uc 1 RBPU 1 0 :1:7 
-]
-[u S197 . 1 `S179 1 . 1 0 `S182 1 . 1 0 `S191 1 . 1 0 ]
-[v _INTCON2bits INTCON2bits `VES197  1 e 1 @4081 ]
-[s S102 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S66 . 1 `S53 1 . 1 0 `S59 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES66  1 e 1 @4051 ]
+[s S104 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -312,7 +293,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "18339
-[s S111 . 1 `uc 1 . 1 0 :1:0 
+[s S113 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -321,84 +302,84 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S120 . 1 `uc 1 . 1 0 :6:0 
+[s S122 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S137 . 1 `S102 1 . 1 0 `S111 1 . 1 0 `S120 1 . 1 0 `S111 1 . 1 0 `S120 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES137  1 e 1 @4082 ]
+[u S139 . 1 `S104 1 . 1 0 `S113 1 . 1 0 `S122 1 . 1 0 `S113 1 . 1 0 `S122 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES139  1 e 1 @4082 ]
 "21010
 [v _TMR2IF TMR2IF `VEb  1 e 0 @31985 ]
-"28 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c
+"28 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c
 [v _Phase Phase `ui  1 e 2 0 ]
 [v _Delta_Phase Delta_Phase `ui  1 e 2 0 ]
 [v _Phase_Offset Phase_Offset `ui  1 e 2 0 ]
 "29
-[v _Multiplier Multiplier `i  1 e 2 0 ]
-[v _Result Result `i  1 e 2 0 ]
+[v _Multiplier Multiplier `ui  1 e 2 0 ]
+[v _Result Result `ui  1 e 2 0 ]
 "31
 [v _SineTable SineTable `[64]i  1 e 128 0 ]
-"36 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/main.c
+"36 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c
 [v _main main `(v  1 e 0 0 ]
 {
-"51
+"59
 } 0
-"56
-[v _InitApp InitApp `(v  1 e 0 0 ]
-{
-"62
-} 0
-"58 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c
-[v _InitMotorPWM InitMotorPWM `(v  1 e 0 0 ]
-{
-"85
-} 0
-"90
-[v _InitTMR2 InitTMR2 `(v  1 e 0 0 ]
-{
-"100
-} 0
-"133
-[v _InitPWM3 InitPWM3 `(v  1 e 0 0 ]
-{
-"142
-} 0
-"119
-[v _InitPWM2 InitPWM2 `(v  1 e 0 0 ]
-{
-"128
-} 0
-"105
-[v _InitPWM1 InitPWM1 `(v  1 e 0 0 ]
-{
-"114
-} 0
-"24 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/system.c
-[v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
-{
-"34
-} 0
-"69 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c
-[v _low_isr low_isr `IIL(v  1 e 0 0 ]
-{
-"98
-} 0
-"171 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/pwm.c
+"171 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c
 [v _UpdatePWM3 UpdatePWM3 `(v  1 e 0 0 ]
 {
-"178
+"177
 } 0
-"159
+"160
 [v _UpdatePWM2 UpdatePWM2 `(v  1 e 0 0 ]
 {
 "166
 } 0
-"147
+"148
 [v _UpdatePWM1 UpdatePWM1 `(v  1 e 0 0 ]
 {
-"154
+"155
 } 0
-"29 /home/fbcbarbosa/Development/pic18_3_phase_pwm.X/interrupts.c
+"64 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/main.c
+[v _InitApp InitApp `(v  1 e 0 0 ]
+{
+"70
+} 0
+"58 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/pwm.c
+[v _InitMotorPWM InitMotorPWM `(v  1 e 0 0 ]
+{
+"86
+} 0
+"91
+[v _InitTMR2 InitTMR2 `(v  1 e 0 0 ]
+{
+"101
+} 0
+"134
+[v _InitPWM3 InitPWM3 `(v  1 e 0 0 ]
+{
+"143
+} 0
+"120
+[v _InitPWM2 InitPWM2 `(v  1 e 0 0 ]
+{
+"129
+} 0
+"106
+[v _InitPWM1 InitPWM1 `(v  1 e 0 0 ]
+{
+"115
+} 0
+"24 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/system.c
+[v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
+{
+"34
+} 0
+"69 /home/fbcbarbosa/Development/3_Phase_PWM/pic18_3_phase_pwm.X/interrupts.c
+[v _low_isr low_isr `IIL(v  1 e 0 0 ]
+{
+"98
+} 0
+"29
 [v _high_isr high_isr `II(v  1 e 0 0 ]
 {
 "65

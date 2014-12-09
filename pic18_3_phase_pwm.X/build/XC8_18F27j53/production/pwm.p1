@@ -1,5 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"11778 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
+"10323 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"11778
 [v _EECON2 `Vuc ~T0 @X0 0 e@4007 ]
 "1072
 [s S47 :1 `uc 1 ]
@@ -41,20 +43,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S1191 . . . . . . ]
 "18339
 [v _INTCONbits `VS1191 ~T0 @X0 0 e@4082 ]
-"18206
-[s S1188 :7 `uc 1 :1 `uc 1 ]
-[n S1188 . . NOT_RBPU ]
-"18210
-[s S1189 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S1189 . RBIP INT3IP TMR0IP INTEDG3 INTEDG2 INTEDG1 INTEDG0 nRBPU ]
-"18220
-[s S1190 :1 `uc 1 :1 `uc 1 :1 `uc 1 :4 `uc 1 :1 `uc 1 ]
-[n S1190 . . INT3P T0IP . RBPU ]
-"18205
-[u S1187 `S1188 1 `S1189 1 `S1190 1 ]
-[n S1187 . . . . ]
-"18228
-[v _INTCON2bits `VS1187 ~T0 @X0 0 e@4081 ]
 "44 pwm.c
 [v _InitTMR2 `(v ~T0 @X0 0 ef ]
 "46
@@ -9212,9 +9200,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _Phase_Offset `ui ~T0 @X0 1 e ]
 [; ;pwm.c: 28: uint16_t Phase, Delta_Phase, Phase_Offset;
 "29
-[v _Multiplier `i ~T0 @X0 1 e ]
-[v _Result `i ~T0 @X0 1 e ]
-[; ;pwm.c: 29: int16_t Multiplier, Result;
+[v _Multiplier `ui ~T0 @X0 1 e ]
+[v _Result `ui ~T0 @X0 1 e ]
+[; ;pwm.c: 29: uint16_t Multiplier, Result;
 "31
 [v _SineTable `i ~T0 @X0 -> 64 `i e ]
 [i _SineTable
@@ -9315,227 +9303,221 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pwm.c: 60: Phase = 0;
 "60
 [e = _Phase -> -> 0 `i `ui ]
-[; ;pwm.c: 61: Delta_Phase = (unsigned int)(60 * 65536 / 20000);
+[; ;pwm.c: 61: Delta_Phase = (unsigned int)((60 * 65536 / 20000) % 64);
 "61
-[e = _Delta_Phase -> / * -> -> 60 `i `l -> 65536 `l -> -> 20000 `i `l `ui ]
-[; ;pwm.c: 64: {EECON2 = 0b01010101; EECON2 = 0b10101010; PPSCONbits.IOLOCK = 0;};
+[e = _Delta_Phase -> % / * -> -> 60 `i `l -> 65536 `l -> -> 20000 `i `l -> -> 64 `i `l `ui ]
+[; ;pwm.c: 64: TRISB = 0x00;
 "64
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;pwm.c: 66: {EECON2 = 0b01010101; EECON2 = 0b10101010; PPSCONbits.IOLOCK = 0;};
+"66
 {
 [e = _EECON2 -> -> 85 `i `uc ]
 [e = _EECON2 -> -> 170 `i `uc ]
 [e = . . _PPSCONbits 0 0 -> -> 0 `i `uc ]
 }
-[; ;pwm.c: 65: RPOR10=14;
-"65
-[e = _RPOR10 -> -> 14 `i `uc ]
-[; ;pwm.c: 66: RPOR9=18;
-"66
-[e = _RPOR9 -> -> 18 `i `uc ]
-[; ;pwm.c: 67: RPOR8=22;
+[; ;pwm.c: 67: RPOR10=14;
 "67
-[e = _RPOR8 -> -> 22 `i `uc ]
-[; ;pwm.c: 68: RPOR7=15;
+[e = _RPOR10 -> -> 14 `i `uc ]
+[; ;pwm.c: 68: RPOR9=18;
 "68
-[e = _RPOR7 -> -> 15 `i `uc ]
-[; ;pwm.c: 69: RPOR6=19;
+[e = _RPOR9 -> -> 18 `i `uc ]
+[; ;pwm.c: 69: RPOR8=22;
 "69
-[e = _RPOR6 -> -> 19 `i `uc ]
-[; ;pwm.c: 70: RPOR5=23;
+[e = _RPOR8 -> -> 22 `i `uc ]
+[; ;pwm.c: 70: RPOR7=15;
 "70
-[e = _RPOR5 -> -> 23 `i `uc ]
-[; ;pwm.c: 71: {EECON2 = 0b01010101; EECON2 = 0b10101010; PPSCONbits.IOLOCK = 1;};
+[e = _RPOR7 -> -> 15 `i `uc ]
+[; ;pwm.c: 71: RPOR6=19;
 "71
+[e = _RPOR6 -> -> 19 `i `uc ]
+[; ;pwm.c: 72: RPOR5=23;
+"72
+[e = _RPOR5 -> -> 23 `i `uc ]
+[; ;pwm.c: 73: {EECON2 = 0b01010101; EECON2 = 0b10101010; PPSCONbits.IOLOCK = 1;};
+"73
 {
 [e = _EECON2 -> -> 85 `i `uc ]
 [e = _EECON2 -> -> 170 `i `uc ]
 [e = . . _PPSCONbits 0 0 -> -> 1 `i `uc ]
 }
-[; ;pwm.c: 74: INTCONbits.GIE_GIEH = 0b1;
-"74
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-[; ;pwm.c: 75: INTCONbits.PEIE_GIEL = 0b1;
-"75
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-[; ;pwm.c: 76: INTCONbits.TMR0IE = 0b1;
+[; ;pwm.c: 76: INTCONbits.GIE_GIEH = 0b1;
 "76
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;pwm.c: 77: INTCON2bits.T0IP = 0b1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[; ;pwm.c: 77: INTCONbits.PEIE_GIEL = 0b1;
 "77
-[e = . . _INTCON2bits 2 2 -> -> 1 `i `uc ]
-[; ;pwm.c: 80: InitTMR2();
-"80
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;pwm.c: 81: InitTMR2();
+"81
 [e ( _InitTMR2 ..  ]
-[; ;pwm.c: 82: InitPWM1();
-"82
-[e ( _InitPWM1 ..  ]
-[; ;pwm.c: 83: InitPWM2();
+[; ;pwm.c: 83: InitPWM1();
 "83
-[e ( _InitPWM2 ..  ]
-[; ;pwm.c: 84: InitPWM3();
+[e ( _InitPWM1 ..  ]
+[; ;pwm.c: 84: InitPWM2();
 "84
-[e ( _InitPWM3 ..  ]
-[; ;pwm.c: 85: }
+[e ( _InitPWM2 ..  ]
+[; ;pwm.c: 85: InitPWM3();
 "85
+[e ( _InitPWM3 ..  ]
+[; ;pwm.c: 86: }
+"86
 [e :UE 1268 ]
 }
-"90
-[v _InitTMR2 `(v ~T0 @X0 1 ef ]
 "91
+[v _InitTMR2 `(v ~T0 @X0 1 ef ]
+"92
 {
-[; ;pwm.c: 90: void InitTMR2(void)
-[; ;pwm.c: 91: {
+[; ;pwm.c: 91: void InitTMR2(void)
+[; ;pwm.c: 92: {
 [e :U _InitTMR2 ]
 [f ]
-[; ;pwm.c: 93: T2CONbits.T2OUTPS = 0b0000;
-"93
-[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
-[; ;pwm.c: 94: T2CONbits.T2CKPS = 0b10;
+[; ;pwm.c: 94: T2CONbits.T2OUTPS = 0b0000;
 "94
-[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
-[; ;pwm.c: 95: T2CONbits.TMR2ON = 0b1;
+[e = . . _T2CONbits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 95: T2CONbits.T2CKPS = 0b10;
 "95
+[e = . . _T2CONbits 0 0 -> -> 2 `i `uc ]
+[; ;pwm.c: 96: T2CONbits.TMR2ON = 0b1;
+"96
 [e = . . _T2CONbits 0 1 -> -> 1 `i `uc ]
-[; ;pwm.c: 97: PR2 = 24;
-"97
+[; ;pwm.c: 98: PR2 = 24;
+"98
 [e = _PR2 -> -> 24 `i `uc ]
-[; ;pwm.c: 100: }
-"100
+[; ;pwm.c: 101: }
+"101
 [e :UE 1269 ]
 }
-"105
-[v _InitPWM1 `(v ~T0 @X0 1 ef ]
 "106
+[v _InitPWM1 `(v ~T0 @X0 1 ef ]
+"107
 {
-[; ;pwm.c: 105: void InitPWM1(void)
-[; ;pwm.c: 106: {
+[; ;pwm.c: 106: void InitPWM1(void)
+[; ;pwm.c: 107: {
 [e :U _InitPWM1 ]
 [f ]
-[; ;pwm.c: 107: CCPR1L = 0b00000000;
-"107
-[e = _CCPR1L -> -> 0 `i `uc ]
-[; ;pwm.c: 108: CCP1CONbits.DC1B = 0b00;
+[; ;pwm.c: 108: CCPR1L = 0b00000000;
 "108
+[e = _CCPR1L -> -> 0 `i `uc ]
+[; ;pwm.c: 109: CCP1CONbits.DC1B = 0b00;
+"109
 [e = . . _CCP1CONbits 0 1 -> -> 0 `i `uc ]
-[; ;pwm.c: 110: CCP1CONbits.P1M = 0b10;
-"110
-[e = . . _CCP1CONbits 0 2 -> -> 2 `i `uc ]
-[; ;pwm.c: 111: CCP1CONbits.CCP1M = 0b1100;
+[; ;pwm.c: 111: CCP1CONbits.P1M = 0b10;
 "111
-[e = . . _CCP1CONbits 0 0 -> -> 12 `i `uc ]
-[; ;pwm.c: 112: CCPTMRS0bits.C1TSEL = 0b000;
+[e = . . _CCP1CONbits 0 2 -> -> 2 `i `uc ]
+[; ;pwm.c: 112: CCP1CONbits.CCP1M = 0b1100;
 "112
-[e = . . _CCPTMRS0bits 0 0 -> -> 0 `i `uc ]
-[; ;pwm.c: 113: ECCP1DELbits.P1DC = 4;
+[e = . . _CCP1CONbits 0 0 -> -> 12 `i `uc ]
+[; ;pwm.c: 113: CCPTMRS0bits.C1TSEL = 0b000;
 "113
-[e = . . _ECCP1DELbits 0 0 -> -> 4 `i `uc ]
-[; ;pwm.c: 114: }
+[e = . . _CCPTMRS0bits 0 0 -> -> 0 `i `uc ]
+[; ;pwm.c: 114: ECCP1DELbits.P1DC = 4;
 "114
+[e = . . _ECCP1DELbits 0 0 -> -> 4 `i `uc ]
+[; ;pwm.c: 115: }
+"115
 [e :UE 1270 ]
 }
-"119
-[v _InitPWM2 `(v ~T0 @X0 1 ef ]
 "120
+[v _InitPWM2 `(v ~T0 @X0 1 ef ]
+"121
 {
-[; ;pwm.c: 119: void InitPWM2(void)
-[; ;pwm.c: 120: {
+[; ;pwm.c: 120: void InitPWM2(void)
+[; ;pwm.c: 121: {
 [e :U _InitPWM2 ]
 [f ]
-[; ;pwm.c: 121: CCPR2L = 0b00000000;
-"121
-[e = _CCPR2L -> -> 0 `i `uc ]
-[; ;pwm.c: 122: CCP2CONbits.DC2B = 0b00;
+[; ;pwm.c: 122: CCPR2L = 0b00000000;
 "122
+[e = _CCPR2L -> -> 0 `i `uc ]
+[; ;pwm.c: 123: CCP2CONbits.DC2B = 0b00;
+"123
 [e = . . _CCP2CONbits 0 1 -> -> 0 `i `uc ]
-[; ;pwm.c: 124: CCP2CONbits.P2M = 0b10;
-"124
-[e = . . _CCP2CONbits 0 2 -> -> 2 `i `uc ]
-[; ;pwm.c: 125: CCP2CONbits.CCP2M = 0b1100;
+[; ;pwm.c: 125: CCP2CONbits.P2M = 0b10;
 "125
-[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
-[; ;pwm.c: 126: CCPTMRS0bits.C2TSEL = 0b000;
+[e = . . _CCP2CONbits 0 2 -> -> 2 `i `uc ]
+[; ;pwm.c: 126: CCP2CONbits.CCP2M = 0b1100;
 "126
-[e = . . _CCPTMRS0bits 0 1 -> -> 0 `i `uc ]
-[; ;pwm.c: 127: ECCP2DELbits.P2DC = 4;
+[e = . . _CCP2CONbits 0 0 -> -> 12 `i `uc ]
+[; ;pwm.c: 127: CCPTMRS0bits.C2TSEL = 0b000;
 "127
-[e = . . _ECCP2DELbits 0 0 -> -> 4 `i `uc ]
-[; ;pwm.c: 128: }
+[e = . . _CCPTMRS0bits 0 1 -> -> 0 `i `uc ]
+[; ;pwm.c: 128: ECCP2DELbits.P2DC = 4;
 "128
+[e = . . _ECCP2DELbits 0 0 -> -> 4 `i `uc ]
+[; ;pwm.c: 129: }
+"129
 [e :UE 1271 ]
 }
-"133
-[v _InitPWM3 `(v ~T0 @X0 1 ef ]
 "134
+[v _InitPWM3 `(v ~T0 @X0 1 ef ]
+"135
 {
-[; ;pwm.c: 133: void InitPWM3(void)
-[; ;pwm.c: 134: {
+[; ;pwm.c: 134: void InitPWM3(void)
+[; ;pwm.c: 135: {
 [e :U _InitPWM3 ]
 [f ]
-[; ;pwm.c: 135: CCPR3L = 0b00000000;
-"135
-[e = _CCPR3L -> -> 0 `i `uc ]
-[; ;pwm.c: 136: CCP3CONbits.DC3B = 0b00;
+[; ;pwm.c: 136: CCPR3L = 0b00000000;
 "136
+[e = _CCPR3L -> -> 0 `i `uc ]
+[; ;pwm.c: 137: CCP3CONbits.DC3B = 0b00;
+"137
 [e = . . _CCP3CONbits 0 1 -> -> 0 `i `uc ]
-[; ;pwm.c: 138: CCP3CONbits.P3M = 0b10;
-"138
-[e = . . _CCP3CONbits 0 2 -> -> 2 `i `uc ]
-[; ;pwm.c: 139: CCP3CONbits.CCP3M = 0b1100;
+[; ;pwm.c: 139: CCP3CONbits.P3M = 0b10;
 "139
-[e = . . _CCP3CONbits 0 0 -> -> 12 `i `uc ]
-[; ;pwm.c: 140: CCPTMRS0bits.C1TSEL = 0b000;
+[e = . . _CCP3CONbits 0 2 -> -> 2 `i `uc ]
+[; ;pwm.c: 140: CCP3CONbits.CCP3M = 0b1100;
 "140
-[e = . . _CCPTMRS0bits 0 0 -> -> 0 `i `uc ]
-[; ;pwm.c: 141: ECCP3DELbits.P3DC = 4;
+[e = . . _CCP3CONbits 0 0 -> -> 12 `i `uc ]
+[; ;pwm.c: 141: CCPTMRS0bits.C3TSEL = 0b00;
 "141
-[e = . . _ECCP3DELbits 0 0 -> -> 4 `i `uc ]
-[; ;pwm.c: 142: }
+[e = . . _CCPTMRS0bits 0 2 -> -> 0 `i `uc ]
+[; ;pwm.c: 142: ECCP3DELbits.P3DC = 4;
 "142
+[e = . . _ECCP3DELbits 0 0 -> -> 4 `i `uc ]
+[; ;pwm.c: 143: }
+"143
 [e :UE 1272 ]
 }
-"147
-[v _UpdatePWM1 `(v ~T0 @X0 1 ef ]
 "148
+[v _UpdatePWM1 `(v ~T0 @X0 1 ef ]
+"149
 {
-[; ;pwm.c: 147: void UpdatePWM1()
-[; ;pwm.c: 148: {
+[; ;pwm.c: 148: void UpdatePWM1()
+[; ;pwm.c: 149: {
 [e :U _UpdatePWM1 ]
 [f ]
-[; ;pwm.c: 149: Phase += Delta_Phase;
-"149
-[e =+ _Phase _Delta_Phase ]
-[; ;pwm.c: 150: Phase_Offset = 0;
+[; ;pwm.c: 150: Phase = (Phase + Delta_Phase) % 64;
 "150
-[e = _Phase_Offset -> -> 0 `i `ui ]
-[; ;pwm.c: 151: Result = 32767 + SineTable[(Phase + Phase_Offset)] >> 6;
+[e = _Phase % + _Phase _Delta_Phase -> -> 64 `i `ui ]
+[; ;pwm.c: 151: Result = 32767 + SineTable[Phase];
 "151
-[e = _Result >> + -> 32767 `i *U + &U _SineTable * -> + _Phase _Phase_Offset `ux -> -> # *U &U _SineTable `ui `ux -> 6 `i ]
-[; ;pwm.c: 152: CCPR1L = Result >> 2;
+[e = _Result -> + -> 32767 `i *U + &U _SineTable * -> _Phase `ux -> -> # *U &U _SineTable `ui `ux `ui ]
+[; ;pwm.c: 152: Result = Result >> 6;
 "152
-[e = _CCPR1L -> >> _Result -> 2 `i `uc ]
-[; ;pwm.c: 153: CCP1CONbits.DC1B = Result;
+[e = _Result >> _Result -> 6 `i ]
+[; ;pwm.c: 153: CCPR1L = Result >> 2;
 "153
-[e = . . _CCP1CONbits 0 1 -> _Result `uc ]
-[; ;pwm.c: 154: }
+[e = _CCPR1L -> >> _Result -> 2 `i `uc ]
+[; ;pwm.c: 154: CCP1CONbits.DC1B = Result;
 "154
+[e = . . _CCP1CONbits 0 1 -> _Result `uc ]
+[; ;pwm.c: 155: }
+"155
 [e :UE 1273 ]
 }
-"159
-[v _UpdatePWM2 `(v ~T0 @X0 1 ef ]
 "160
+[v _UpdatePWM2 `(v ~T0 @X0 1 ef ]
+"161
 {
-[; ;pwm.c: 159: void UpdatePWM2()
-[; ;pwm.c: 160: {
+[; ;pwm.c: 160: void UpdatePWM2()
+[; ;pwm.c: 161: {
 [e :U _UpdatePWM2 ]
 [f ]
-[; ;pwm.c: 161: Phase += Delta_Phase;
-"161
-[e =+ _Phase _Delta_Phase ]
-[; ;pwm.c: 162: Phase_Offset = 0x5555;
+[; ;pwm.c: 162: Phase = (Phase + Delta_Phase + 127) % 64;
 "162
-[e = _Phase_Offset -> -> 21845 `i `ui ]
-[; ;pwm.c: 163: Result = 32767 + SineTable[(Phase + Phase_Offset)] >> 6;
+[e = _Phase % + + _Phase _Delta_Phase -> -> 127 `i `ui -> -> 64 `i `ui ]
+[; ;pwm.c: 163: Result = 32767 + SineTable[Phase];
 "163
-[e = _Result >> + -> 32767 `i *U + &U _SineTable * -> + _Phase _Phase_Offset `ux -> -> # *U &U _SineTable `ui `ux -> 6 `i ]
+[e = _Result -> + -> 32767 `i *U + &U _SineTable * -> _Phase `ux -> -> # *U &U _SineTable `ui `ux `ui ]
 [; ;pwm.c: 164: CCPR2L = Result >> 2;
 "164
 [e = _CCPR2L -> >> _Result -> 2 `i `uc ]
@@ -9554,22 +9536,19 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pwm.c: 172: {
 [e :U _UpdatePWM3 ]
 [f ]
-[; ;pwm.c: 173: Phase += Delta_Phase;
+[; ;pwm.c: 173: Phase = (Phase + Delta_Phase + 254) % 64;
 "173
-[e =+ _Phase _Delta_Phase ]
-[; ;pwm.c: 174: Phase_Offset = 0xAAAA;
+[e = _Phase % + + _Phase _Delta_Phase -> -> 254 `i `ui -> -> 64 `i `ui ]
+[; ;pwm.c: 174: Result = 32767 + SineTable[Phase];
 "174
-[e = _Phase_Offset -> 43690 `ui ]
-[; ;pwm.c: 175: Result = 32767 + SineTable[(Phase + Phase_Offset)] >> 6;
+[e = _Result -> + -> 32767 `i *U + &U _SineTable * -> _Phase `ux -> -> # *U &U _SineTable `ui `ux `ui ]
+[; ;pwm.c: 175: CCPR3L = Result >> 2;
 "175
-[e = _Result >> + -> 32767 `i *U + &U _SineTable * -> + _Phase _Phase_Offset `ux -> -> # *U &U _SineTable `ui `ux -> 6 `i ]
-[; ;pwm.c: 176: CCPR3L = Result >> 2;
-"176
 [e = _CCPR3L -> >> _Result -> 2 `i `uc ]
-[; ;pwm.c: 177: CCP3CONbits.DC3B = Result;
-"177
+[; ;pwm.c: 176: CCP3CONbits.DC3B = Result;
+"176
 [e = . . _CCP3CONbits 0 1 -> _Result `uc ]
-[; ;pwm.c: 178: }
-"178
+[; ;pwm.c: 177: }
+"177
 [e :UE 1275 ]
 }

@@ -4,7 +4,15 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
 "34 main.c
 [v _InitApp `(v ~T0 @X0 0 ef ]
-"13 pwm.h
+"21010 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
+[v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
+"15 pwm.h
+[v _UpdatePWM1 `(v ~T0 @X0 0 ef ]
+"16
+[v _UpdatePWM2 `(v ~T0 @X0 0 ef ]
+"17
+[v _UpdatePWM3 `(v ~T0 @X0 0 ef ]
+"13
 [v _InitMotorPWM `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
@@ -9057,39 +9065,62 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;main.c: 37: {
 [e :U _main ]
 [f ]
-[; ;main.c: 39: ConfigureOscillator();
-"39
+"38
+[v _x `i ~T0 @X0 1 a ]
+[; ;main.c: 38: int x;
+[; ;main.c: 41: ConfigureOscillator();
+"41
 [e ( _ConfigureOscillator ..  ]
-[; ;main.c: 42: InitApp();
-"42
+[; ;main.c: 44: InitApp();
+"44
 [e ( _InitApp ..  ]
-[; ;main.c: 46: while(1)
-"46
+[; ;main.c: 48: while(1)
+"48
 [e :U 1270 ]
-[; ;main.c: 47: {
-"47
-{
+[; ;main.c: 49: {
 "49
+{
+[; ;main.c: 50: if (TMR2IF) {
+"50
+[e $ ! _TMR2IF 1272  ]
+{
+[; ;main.c: 51: UpdatePWM1();
+"51
+[e ( _UpdatePWM1 ..  ]
+[; ;main.c: 52: UpdatePWM2();
+"52
+[e ( _UpdatePWM2 ..  ]
+[; ;main.c: 53: UpdatePWM3();
+"53
+[e ( _UpdatePWM3 ..  ]
+[; ;main.c: 55: TMR2IF = 0;
+"55
+[e = _TMR2IF -> -> 0 `i `b ]
+"56
+}
+[e :U 1272 ]
+"57
 }
 [e :U 1269 ]
-"46
+"48
 [e $U 1270  ]
 [e :U 1271 ]
-[; ;main.c: 49: }
-[; ;main.c: 51: }
-"51
+[; ;main.c: 56: }
+[; ;main.c: 57: }
+[; ;main.c: 59: }
+"59
 [e :UE 1268 ]
 }
-"56
+"64
 [v _InitApp `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 56: void InitApp(void) {
+[; ;main.c: 64: void InitApp(void) {
 [e :U _InitApp ]
 [f ]
-[; ;main.c: 61: InitMotorPWM();
-"61
+[; ;main.c: 69: InitMotorPWM();
+"69
 [e ( _InitMotorPWM ..  ]
-[; ;main.c: 62: }
-"62
-[e :UE 1272 ]
+[; ;main.c: 70: }
+"70
+[e :UE 1273 ]
 }

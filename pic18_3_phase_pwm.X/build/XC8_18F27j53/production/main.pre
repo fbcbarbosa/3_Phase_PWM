@@ -11725,6 +11725,8 @@ void InitApp(void);
 
 void main(void)
 {
+int x;
+
 
 ConfigureOscillator();
 
@@ -11735,12 +11737,18 @@ InitApp();
 
 while(1)
 {
+if (TMR2IF) {
+UpdatePWM1();
+UpdatePWM2();
+UpdatePWM3();
 
+TMR2IF = 0;
+}
 }
 
 }
 
-# 56
+# 64
 void InitApp(void) {
 
 
