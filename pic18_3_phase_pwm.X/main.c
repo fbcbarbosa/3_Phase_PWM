@@ -31,40 +31,29 @@
 /* Main Program                                                               */
 /******************************************************************************/
 
-void InitApp(void);
-
 void main(void)
 {
-    int x;
-
     /* Configure the oscillator for the device */
     ConfigureOscillator();
 
     /* Initialize I/O and Peripherals for application */
-    InitApp();
+    InitMotorPWM();
 
     /* TODO <INSERT USER APPLICATION CODE HERE> */
 
     while(1)
     {
         if (TMR2IF) {
+
+            PORTBbits.RB1 = 1;
+
             UpdatePWM1(); /* Updates Echanced PWM 1 duty-cycle */
             UpdatePWM2(); /* Updates Echanced PWM 2 duty-cycle */
             UpdatePWM3(); /* Updates Echanced PWM 3 duty-cycle */
 
             TMR2IF = 0; /* Clear Interrupt Flag */
+
+            PORTBbits.RB1 = 0;
         }
     }
-
-}
-
-/**
- * Setup analog functionality and port direction and initialize peripherals.
- */
-void InitApp(void) {
-
-    /* Setup analog functionality and port direction */
-    
-    /* Initialize peripherals */
-    InitMotorPWM();
 }

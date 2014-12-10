@@ -2,18 +2,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "19 system.h
 [v _ConfigureOscillator `(v ~T0 @X0 0 ef ]
-"34 main.c
-[v _InitApp `(v ~T0 @X0 0 ef ]
+"13 pwm.h
+[v _InitMotorPWM `(v ~T0 @X0 0 ef ]
 "21010 /opt/microchip/xc8/v1.33/include/pic18f27j53.h
 [v _TMR2IF `Vb ~T0 @X0 0 e@31985 ]
+"8837
+[s S598 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S598 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"8847
+[s S599 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S599 . AN12 AN10 AN8 AN9 . KBI2 KBI3 ]
+"8856
+[s S600 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S600 . INT0 . CTED1 CTED2 KBI0 KBI1 PGC PGD ]
+"8866
+[s S601 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S601 . RP3 RTCC . SCK1 SDI1 RP9 RP10 ]
+"8875
+[s S602 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S602 . . RP4 VMO VPO SCL1 SDA1 ]
+"8883
+[s S603 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S603 . . REFO RP6 RP7 RP8 ]
+"8890
+[s S604 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S604 . . C3INC RP5 C3INA CCP4 CCP5 CCP6 CCP7 ]
+"8900
+[s S605 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S605 . C3IND . C2INC ]
+"8905
+[s S606 :3 `uc 1 :1 `uc 1 ]
+[n S606 . . CCP2_PA2 ]
+"8836
+[u S597 `S598 1 `S599 1 `S600 1 `S601 1 `S602 1 `S603 1 `S604 1 `S605 1 `S606 1 ]
+[n S597 . . . . . . . . . . ]
+"8910
+[v _PORTBbits `VS597 ~T0 @X0 0 e@3969 ]
 "15 pwm.h
 [v _UpdatePWM1 `(v ~T0 @X0 0 ef ]
 "16
 [v _UpdatePWM2 `(v ~T0 @X0 0 ef ]
 "17
 [v _UpdatePWM3 `(v ~T0 @X0 0 ef ]
-"13
-[v _InitMotorPWM `(v ~T0 @X0 0 ef ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f27j53.h: 47: extern volatile unsigned char ADCTRIG @ 0xEB8;
@@ -9056,71 +9086,60 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pwm.h: 15: void UpdatePWM1(void);
 [; ;pwm.h: 16: void UpdatePWM2(void);
 [; ;pwm.h: 17: void UpdatePWM3(void);
-[; ;main.c: 34: void InitApp(void);
-"36 main.c
+"34 main.c
 [v _main `(v ~T0 @X0 1 ef ]
-"37
+"35
 {
-[; ;main.c: 36: void main(void)
-[; ;main.c: 37: {
+[; ;main.c: 34: void main(void)
+[; ;main.c: 35: {
 [e :U _main ]
 [f ]
-"38
-[v _x `i ~T0 @X0 1 a ]
-[; ;main.c: 38: int x;
-[; ;main.c: 41: ConfigureOscillator();
-"41
+[; ;main.c: 37: ConfigureOscillator();
+"37
 [e ( _ConfigureOscillator ..  ]
-[; ;main.c: 44: InitApp();
+[; ;main.c: 40: InitMotorPWM();
+"40
+[e ( _InitMotorPWM ..  ]
+[; ;main.c: 44: while(1)
 "44
-[e ( _InitApp ..  ]
-[; ;main.c: 48: while(1)
-"48
 [e :U 1270 ]
-[; ;main.c: 49: {
-"49
+[; ;main.c: 45: {
+"45
 {
-[; ;main.c: 50: if (TMR2IF) {
-"50
+[; ;main.c: 46: if (TMR2IF) {
+"46
 [e $ ! _TMR2IF 1272  ]
 {
-[; ;main.c: 51: UpdatePWM1();
-"51
+[; ;main.c: 48: PORTBbits.RB1 = 1;
+"48
+[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 50: UpdatePWM1();
+"50
 [e ( _UpdatePWM1 ..  ]
-[; ;main.c: 52: UpdatePWM2();
-"52
+[; ;main.c: 51: UpdatePWM2();
+"51
 [e ( _UpdatePWM2 ..  ]
-[; ;main.c: 53: UpdatePWM3();
-"53
+[; ;main.c: 52: UpdatePWM3();
+"52
 [e ( _UpdatePWM3 ..  ]
-[; ;main.c: 55: TMR2IF = 0;
-"55
+[; ;main.c: 54: TMR2IF = 0;
+"54
 [e = _TMR2IF -> -> 0 `i `b ]
+[; ;main.c: 56: PORTBbits.RB1 = 0;
 "56
-}
-[e :U 1272 ]
+[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
 "57
 }
+[e :U 1272 ]
+"58
+}
 [e :U 1269 ]
-"48
+"44
 [e $U 1270  ]
 [e :U 1271 ]
-[; ;main.c: 56: }
 [; ;main.c: 57: }
+[; ;main.c: 58: }
 [; ;main.c: 59: }
 "59
 [e :UE 1268 ]
-}
-"64
-[v _InitApp `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 64: void InitApp(void) {
-[e :U _InitApp ]
-[f ]
-[; ;main.c: 69: InitMotorPWM();
-"69
-[e ( _InitMotorPWM ..  ]
-[; ;main.c: 70: }
-"70
-[e :UE 1273 ]
 }

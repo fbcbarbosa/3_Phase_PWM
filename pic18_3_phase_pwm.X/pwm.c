@@ -15,11 +15,10 @@
 /******************************************************************************/
 
 #define FPWM 20000      // 20 kHz
-#define DEADTIME (unsigned int)(0.000002 * GetInstructionClock())
-#define _DES_FREQ 60    // 60 Hz sine wave is required
-#define _DELTA_PHASE (unsigned int)((_DES_FREQ * 65536 / FPWM) % 64)
-#define _120_DEGREES 127
-#define _240_DEGREES 254
+#define _DES_FREQ 20    // 60 Hz sine wave is required
+#define _DELTA_PHASE (unsigned int)((_DES_FREQ * 65536 / FPWM))
+#define _120_DEGREES 0x5555
+#define _240_DEGREES 0xAAAA
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
@@ -90,12 +89,12 @@ void InitMotorPWM(void)
  */
 void InitTMR2(void)
 {
-    // Frequency = 2 MHz / 100 kHz
+    // Fsys = 48 MHz
     T2CONbits.T2OUTPS = 0b0000; // 1:1 Postscale
-    T2CONbits.T2CKPS = 0b10;    // Prescaler is 4
+    T2CONbits.T2CKPS = 0b01;    // Prescaler is 4
     T2CONbits.TMR2ON = 0b1;     // Set Timer2 on
 
-    PR2 = 24; // Interreputs every 20 kHz - increasing PR2 decreases frequency
+    PR2 = 149; // Interreputs every 20 kHz - increasing PR2 decreases frequency
 
     // F = Fsys/4/(PR2 + 1)/TMR2 Prescaler
 }
@@ -105,7 +104,7 @@ void InitTMR2(void)
  */
 void InitPWM1(void)
 {
-    CCPR1L = 0b00000000;              // eight MSB of 10-bit PWM duty cycle
+    CCPR1L = 0b10000000;              // eight MSB of 10-bit PWM duty cycle
     CCP1CONbits.DC1B = 0b00;          // two LSB of 10-bit PWM duty cycle
 
     CCP1CONbits.P1M = 0b10;           // Half-bridge operation (PxA, PxB modulated with dead-band control)
@@ -119,7 +118,7 @@ void InitPWM1(void)
  */
 void InitPWM2(void)
 {
-    CCPR2L = 0b00000000;              // eight MSB of 10-bit PWM duty cycle
+    CCPR2L = 0b10000000;              // eight MSB of 10-bit PWM duty cycle
     CCP2CONbits.DC2B = 0b00;          // two LSB of 10-bit PWM duty cycle
 
     CCP2CONbits.P2M = 0b10;           // Half-bridge operation (PxA, PxB modulated with dead-band control)
@@ -133,7 +132,7 @@ void InitPWM2(void)
  */
 void InitPWM3(void)
 {
-    CCPR3L = 0b00000000;              // eight MSB of 10-bit PWM duty cycle
+    CCPR3L = 0b10000000;              // eight MSB of 10-bit PWM duty cycle
     CCP3CONbits.DC3B = 0b00;          // two LSB of 10-bit PWM duty cycle
 
     CCP3CONbits.P3M = 0b10;           // Half-bridge operation (PxA, PxB modulated with dead-band control)
@@ -147,11 +146,12 @@ void InitPWM3(void)
  */
 void UpdatePWM1()
 {
-    Phase = (Phase + Delta_Phase) % 64;      // Accumulate Delta_Phase in Phase variable
-    Result = 32767 + SineTable[Phase];       // Take sine info
+    Phase = (Phase + Delta_Phase);              // Accumulate Delta_Phase in Phase variable
+    Result = 32767 + SineTable[Phase >> 10];    // Take sine info
     Result = Result >> 6;
-    CCPR1L = Result >> 2;                    // Update Duty Cycle
-    CCP1CONbits.DC1B = Result;               // Update Duty Cycle
+    CCP1CONbits.DC1B = Result;            // Update Duty Cycle
+    CCPR1L = Result >> 2;                       // Update Duty Cycle
+    
 }
 
 /**
@@ -159,10 +159,11 @@ void UpdatePWM1()
  */
 void UpdatePWM2()
 {
-    Phase = (Phase + Delta_Phase + _120_DEGREES) % 64;  // Accumulate Delta_Phase in Phase variable
-    Result = 32767 + SineTable[Phase];                  // Take sine info
-    CCPR2L = Result >> 2;                               // Update Duty Cycle
+    Phase = (Phase + Delta_Phase);  // Accumulate Delta_Phase in Phase variable
+    Result = 32767 + SineTable[(Phase + _120_DEGREES) >> 10];                  // Take sine info
+    Result = Result >> 6;
     CCP2CONbits.DC2B = Result;                          // Update Duty Cycle
+    CCPR2L = Result >> 2;                               // Update Duty Cycle
 }
 
 /**
@@ -170,8 +171,9 @@ void UpdatePWM2()
  */
 void UpdatePWM3()
 {
-    Phase = (Phase + Delta_Phase + _240_DEGREES) % 64;  // Accumulate Delta_Phase in Phase variable
-    Result = 32767 + SineTable[Phase];                  // Take sine info
-    CCPR3L = Result >> 2;                               // Update Duty Cycle
+    Phase = (Phase + Delta_Phase);  // Accumulate Delta_Phase in Phase variable
+    Result = 32767 + SineTable[(Phase + _240_DEGREES) >> 10];                  // Take sine info
+    Result = Result >> 6;
     CCP3CONbits.DC3B = Result;                          // Update Duty Cycle
+    CCPR3L = Result >> 2;                               // Update Duty Cycle
 }

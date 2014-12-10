@@ -11741,7 +11741,7 @@ void InitPWM3(void);
 void InitMotorPWM(void)
 {
 Phase = 0;
-Delta_Phase = (unsigned int)((60 * 65536 / 20000) % 64);
+Delta_Phase = (unsigned int)((20 * 65536 / 20000));
 
 
 TRISB = 0x00;
@@ -11773,10 +11773,10 @@ void InitTMR2(void)
 {
 
 T2CONbits.T2OUTPS = 0b0000;
-T2CONbits.T2CKPS = 0b10;
+T2CONbits.T2CKPS = 0b01;
 T2CONbits.TMR2ON = 0b1;
 
-PR2 = 24;
+PR2 = 149;
 
 
 }
@@ -11784,7 +11784,7 @@ PR2 = 24;
 # 106
 void InitPWM1(void)
 {
-CCPR1L = 0b00000000;
+CCPR1L = 0b10000000;
 CCP1CONbits.DC1B = 0b00;
 
 CCP1CONbits.P1M = 0b10;
@@ -11796,7 +11796,7 @@ ECCP1DELbits.P1DC = 4;
 # 120
 void InitPWM2(void)
 {
-CCPR2L = 0b00000000;
+CCPR2L = 0b10000000;
 CCP2CONbits.DC2B = 0b00;
 
 CCP2CONbits.P2M = 0b10;
@@ -11808,7 +11808,7 @@ ECCP2DELbits.P2DC = 4;
 # 134
 void InitPWM3(void)
 {
-CCPR3L = 0b00000000;
+CCPR3L = 0b10000000;
 CCP3CONbits.DC3B = 0b00;
 
 CCP3CONbits.P3M = 0b10;
@@ -11820,27 +11820,30 @@ ECCP3DELbits.P3DC = 4;
 # 148
 void UpdatePWM1()
 {
-Phase = (Phase + Delta_Phase) % 64;
-Result = 32767 + SineTable[Phase];
+Phase = (Phase + Delta_Phase);
+Result = 32767 + SineTable[Phase >> 10];
 Result = Result >> 6;
-CCPR1L = Result >> 2;
 CCP1CONbits.DC1B = Result;
+CCPR1L = Result >> 2;
+
 }
 
-# 160
+# 161
 void UpdatePWM2()
 {
-Phase = (Phase + Delta_Phase + 127) % 64;
-Result = 32767 + SineTable[Phase];
-CCPR2L = Result >> 2;
+Phase = (Phase + Delta_Phase);
+Result = 32767 + SineTable[(Phase + 0x5555) >> 10];
+Result = Result >> 6;
 CCP2CONbits.DC2B = Result;
+CCPR2L = Result >> 2;
 }
 
-# 171
+# 173
 void UpdatePWM3()
 {
-Phase = (Phase + Delta_Phase + 254) % 64;
-Result = 32767 + SineTable[Phase];
-CCPR3L = Result >> 2;
+Phase = (Phase + Delta_Phase);
+Result = 32767 + SineTable[(Phase + 0xAAAA) >> 10];
+Result = Result >> 6;
 CCP3CONbits.DC3B = Result;
+CCPR3L = Result >> 2;
 }

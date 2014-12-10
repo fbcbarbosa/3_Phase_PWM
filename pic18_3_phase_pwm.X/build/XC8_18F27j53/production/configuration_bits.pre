@@ -11620,8 +11620,8 @@ extern __nonreentrant void _delay3(unsigned char);
 
 # 50 "configuration_bits.c"
 #pragma config WDTEN = ON
-#pragma config PLLDIV = 1
-#pragma config CFGPLLEN = OFF
+#pragma config PLLDIV = 2
+#pragma config CFGPLLEN = ON
 #pragma config STVREN = ON
 #pragma config XINST = OFF
 
@@ -11630,7 +11630,7 @@ extern __nonreentrant void _delay3(unsigned char);
 #pragma config CP0 = OFF
 
 
-#pragma config OSC = INTOSC
+#pragma config OSC = INTOSCPLLO
 #pragma config SOSCSEL = HIGH
 #pragma config CLKOEC = ON
 #pragma config FCMEN = ON

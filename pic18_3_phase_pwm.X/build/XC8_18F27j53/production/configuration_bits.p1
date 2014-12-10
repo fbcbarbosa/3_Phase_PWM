@@ -9010,9 +9010,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 "50 configuration_bits.c
 [p x WDTEN=ON ]
 "51
-[p x PLLDIV=1 ]
+[p x PLLDIV=2 ]
 "52
-[p x CFGPLLEN=OFF ]
+[p x CFGPLLEN=ON ]
 "53
 [p x STVREN=ON ]
 "54
@@ -9022,7 +9022,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "58
 [p x CP0=OFF ]
 "61
-[p x OSC=INTOSC ]
+[p x OSC=INTOSCPLLO ]
 "62
 [p x SOSCSEL=HIGH ]
 "63

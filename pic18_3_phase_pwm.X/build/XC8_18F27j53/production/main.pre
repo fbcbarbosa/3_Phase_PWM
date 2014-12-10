@@ -11721,38 +11721,29 @@ void UpdatePWM2(void);
 void UpdatePWM3(void);
 
 # 34 "main.c"
-void InitApp(void);
-
 void main(void)
 {
-int x;
-
 
 ConfigureOscillator();
 
 
-InitApp();
+InitMotorPWM();
 
 
 
 while(1)
 {
 if (TMR2IF) {
+
+PORTBbits.RB1 = 1;
+
 UpdatePWM1();
 UpdatePWM2();
 UpdatePWM3();
 
 TMR2IF = 0;
+
+PORTBbits.RB1 = 0;
 }
 }
-
-}
-
-# 64
-void InitApp(void) {
-
-
-
-
-InitMotorPWM();
 }
